@@ -102,7 +102,7 @@ const Create = () => {
   
     }}
     wrapperClass="wrapper-class"
-    visible={true}
+    visible={loading}
 />
 
        </div>
