@@ -28,10 +28,11 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/*' element={<NotFound />}/>
         <Route path="/create" element={<Create />} />
-        <Route path="/:id" element={<Update />} />
+        {/* <Route path="/:id" element={<Update />} /> */}
         <Route path='/about' element={<About />} />
-        <Route path='*' element={<NotFound />}/>
+ 
       </Routes>
     </BrowserRouter>
   );
