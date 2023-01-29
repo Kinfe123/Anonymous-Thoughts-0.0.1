@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import {supabase} from "../configs/supabaseClient"
 import { Audio } from "react-loader-spinner"
+import {Helmet} from "react-helmet";
 import AnonCards from "../components/AnonCards"
 const Home = () => {
   
@@ -43,7 +44,15 @@ const Home = () => {
 
   console.log(fetchedData)
   return (
+
+
     <div className="page home">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>HOME | Anon-Thoughts</title>
+                {/* <link rel="canonical" href="" /> */}
+            </Helmet>
       <div className="fixed-header">
       <h2 className="homes">Thoughts</h2>
       <div className="underline"></div>

@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <nav>
 
-        <h1>Anonymous Thoughts</h1>
+       <Link to='/'><h1>Anonymous Thoughts</h1></Link> 
         <div className="creates">
           <Link className="homes-create" to="/">Home</Link>
           <Link to="/create" className="create-tot">Create Thoughts</Link>

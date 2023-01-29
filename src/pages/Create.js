@@ -1,7 +1,9 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import {supabase} from "../configs/supabaseClient"
 import { Audio } from "react-loader-spinner"
+
+import {Helmet} from 'react-helmet'
 
 const Create = () => {
   const navigate = useNavigate()
@@ -44,10 +46,18 @@ const Create = () => {
       navigate('/')
     }
   }
+ useEffect(()=> {
 
+  window.scrollTo(0, 0)
+ } , [])
 
   return (
     <div className="page create">
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>Create Thoughts | Anon-Thoughs</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">What do you want to be called:</label>
@@ -79,7 +89,7 @@ const Create = () => {
 
         <div className="together">
 
-        <button>Create This Thought</button>
+        <button>Post This Thought</button>
 
 
       
