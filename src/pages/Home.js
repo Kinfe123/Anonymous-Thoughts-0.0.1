@@ -54,8 +54,8 @@ const Home = () => {
                 {/* <link rel="canonical" href="" /> */}
             </Helmet>
       <div className="fixed-header">
-      <h2 className="homes">Thoughts</h2>
-      <div className="underline"></div>
+        <h2 className="homes">Thoughts</h2>
+        <div className="underline"></div>
 
 
 

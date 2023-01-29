@@ -55,8 +55,8 @@ const Create = () => {
     <div className="page create">
              <Helmet>
                 <meta charSet="utf-8" />
-                <title>Create Thoughts | Anon-Thoughs</title>
-                <link rel="canonical" href="http://mysite.com/example" />
+                <title>Create Thoughts | Anon-Thoughts</title>
+                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
             </Helmet>
       
       <form onSubmit={handleSubmit}>

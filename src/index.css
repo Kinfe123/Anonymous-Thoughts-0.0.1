@@ -334,6 +334,19 @@ form button {
   cursor: pointer;
 }
 
+@media only screen and (max-width:400px) {
+  .fixed-header  {
+    margin-top: oi;
+
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+}
+
 @media only screen and (max-width: 700px) {
   .smoothie-grid {
     margin-top: 40px;
@@ -388,6 +401,8 @@ form button {
     font-size: 17px;
 
   }
+ 
+
 
   
 }
