@@ -322,6 +322,30 @@ form input, form textarea {
 form input:focus {
   box-shadow: 1px solid rgb(104, 27, 206);
 }
+.unknown-png {
+  width: 40px;
+  height: 40px;
+  box-shadow: 1px 1px 1px 1px  rgb(167, 108, 201);
+  border-radius: 11px;
+  border: none;
+  background:transparent;
+
+}
+.unknown-wrapper {
+  display:flex;
+  margin-bottom: 12px;
+  
+  
+ 
+  
+}
+.unknown-wrapper p {
+  /* font-style: italic; */
+  color: rgb(202, 199, 199);
+  margin-top: 17px;
+  margin-left: 13px;
+
+}
 
 
 form button {

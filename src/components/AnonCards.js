@@ -3,6 +3,7 @@ import { supabase } from "../configs/supabaseClient"
 import { useEffect, useState } from "react"
 import TimeAgo from "javascript-time-ago"
 import moment from "moment/moment"
+import Unknown from '../assests/unknown.png'
 
 const AnonCards = (props) => {
     const {anon , onDelete  , onHandle} = props
@@ -111,7 +112,10 @@ const AnonCards = (props) => {
         <>
          <div className="smoothie-card">
               <div className="wrapper-card">
-             <p>Anon Guy: <b>{anon.name} </b></p>
+              <div className="unknown-wrapper">
+              <img  className="unknown-png"src={Unknown} alt="Anon Guys" />
+             <p>{anon.name} </p>
+              </div>
             <h3>{anon.title}</h3>
             <p className="disc">{anon.body}</p>
             </div>
