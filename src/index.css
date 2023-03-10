@@ -58,6 +58,11 @@ nav a {
   z-index: 2000;
   margin-right: 50px;
 }
+.descr {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
 .fixed-header {
   margin-top:120px;
  
@@ -73,10 +78,64 @@ nav a {
 
 
 }
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.post-detail {
+  margin-left: 30px;
+  margin-top: 150px;
+}
+.likesanddislike {
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+}
+.comments {
+  padding: 20px;
+  width: 50%;
+  font-family: 'Poppins';
+}
+.comments:focus {
+  outline: none;
+  border-radius: 3px;
+  border: none;
+
+  
+}
+
 .card-footer {
   display: flex;
   justify-content: space-between;
  
+
+}
+.outliner {
+  border:1px solid white;
+  width: 50%;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  /* background: rgb(95, 8, 177); */
+  /* border: 2px solid #ffffff; */
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 3px rgb(108, 48, 187);
+
+  
+  
+}
+.post-comment {
+  width: max-content;
+  background: #2c0369;
+  border: 1px solid white;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  font-family: 'Poppins';
 }
 .date-and-time {
   margin-right: 2px;
@@ -145,6 +204,18 @@ nav  .homes-create {
 
 
 }
+.homes-creates {
+  background-color: white;
+  width: max-content;
+  color: #18083b;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  
+
+
+}
 input:focus ,  textarea:focus {
   border: 1px solid #5e10ee;
   -webkit-box-shadow: 10px 10px 5px rgba(108, 11, 187, 0.75);
@@ -173,10 +244,12 @@ nav h1 {
  
 }
 .smoothie-card p {
+
   font-size: 12px;
   /* margin-top: -10px; */
 }
 .smoothie-card {
+  cursor: pointer;
   width: 100%;
 
   padding: 10px;

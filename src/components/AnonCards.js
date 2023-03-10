@@ -1,11 +1,13 @@
 import { useNavigate , Link } from "react-router-dom"
 import { supabase } from "../configs/supabaseClient"
 import { useEffect, useState } from "react"
+
 import TimeAgo from "javascript-time-ago"
 import moment from "moment/moment"
 import Unknown from '../assests/unknown.png'
-
+import CryptoJS from "crypto-js"
 const AnonCards = (props) => {
+    const navigate = useNavigate()
     const {anon , onDelete  , onHandle} = props
     const [likes , setLikes] = useState(0)
     const [dislikes , setDislikes] = useState(0)
@@ -13,6 +15,7 @@ const AnonCards = (props) => {
     const [results, setResults] = useState(0)
     const [resultsD , setResultsD] = useState(0)
     const [date , setDate] = useState('')
+    const [postId , setPostId] = useState('')
     const [avgRating  , setAvgRating] = useState(0)
 
     const updateLikes = async () => {
@@ -22,6 +25,7 @@ const AnonCards = (props) => {
         setDislikes(data.dislikes)
         setResults(data.likes)
         setResultsD(data.dislikes)
+        setPostId(data.id)
         var t = new Date(anon.created_at)
         // var st = `${t.getDay()} ${t.getMonth()} ${t.getFullYear()} ${t.getHours()}:${t.getMinutes()}`
         setDate(data.created_at)
@@ -103,6 +107,16 @@ const AnonCards = (props) => {
     
     }
 
+    // const encryptWithAES = (postId) => {
+    //     const passphrase = "My Secret Passphrase";
+    //     return CryptoJS.AES.encrypt(postId, passphrase).toString();
+    //   };
+    // const encr = encryptWithAES(postId)
+    const handleClicks = () => {
+        navigate('/anon-posts/details/' + postId)
+        
+    }
+
    
  
     
@@ -110,7 +124,7 @@ const AnonCards = (props) => {
 
     return (
         <>
-         <div className="smoothie-card">
+         <div className="smoothie-card" onClick={handleClicks}>
               <div className="wrapper-card">
               <div className="unknown-wrapper">
               <img  className="unknown-png"src={Unknown} alt="Anon Guys" />
