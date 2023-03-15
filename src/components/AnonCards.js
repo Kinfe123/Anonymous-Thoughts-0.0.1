@@ -66,7 +66,9 @@ const AnonCards = (props) => {
    }, [likes , dislikes])
    
     
-    const handleLike = async () => {
+    const handleLike = async (e) => {
+     e.stopPropagation()
+     // preveting the parent div from being activivated 
        setLikes(likes+1)
         let add = 1
         // const result  = await supabase.from('anon_thoughts').select().eq('id', anon.id).single()
@@ -93,7 +95,9 @@ const AnonCards = (props) => {
        
     
     }
-    const handleDisLike = async () => {
+    const handleDisLike = async (e) => {
+        e.stopPropagation()
+        
 
         setDislikes(dislikes + 1)
         
@@ -113,6 +117,7 @@ const AnonCards = (props) => {
     //   };
     // const encr = encryptWithAES(postId)
     const handleClicks = () => {
+
         navigate('/anon-posts/details/' + postId)
         
     }

@@ -498,6 +498,20 @@ form button {
     font-size: 17px;
 
   }
+  .details {
+    margin-top: 200px;
+  }
+  .descr {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .outliner {
+    width: 89%;
+  }
+  .comments {
+    width: 90%;
+  }
  
 
 
