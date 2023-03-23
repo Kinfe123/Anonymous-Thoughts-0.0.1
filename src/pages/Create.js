@@ -31,7 +31,7 @@ const Create = () => {
     const { data, error } = await supabase
       .from('anon_thoughts')
       .insert([{ name, title, body  }])
-      console.log('The data logged from creating ')
+     
     
 
     if (error) {

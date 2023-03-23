@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
 import {supabase} from "../configs/supabaseClient"
 import { Audio } from "react-loader-spinner"
 import {Helmet} from "react-helmet";
 import AnonCards from "../components/AnonCards"
+
 const Home = () => {
   
-
+  const navigate = useNavigate()
   const [errorMsg , setErrorMsg] = useState(null)
   const [loading , setLoading] = useState(false)
   const [fetchedData , setFetchedData] = useState(null)
@@ -41,12 +43,17 @@ const Home = () => {
     }
    fetchData()
   } , [])
+  const handleBugReport = () => {
+     navigate('/bug-reports');
 
+  }
   console.log(fetchedData)
   return (
-
-
+    <>
+    <div className="bug" onClick={handleBugReport}>Bug Report</div>
     <div className="page home">
+
+  
 
             <Helmet>
                 <meta charSet="utf-8" />
@@ -102,6 +109,8 @@ const Home = () => {
        </div>
       )}
     </div>
+    </>
+
   )
 }
 

@@ -9,6 +9,7 @@ import Update from "./pages/Update"
 import NotFound from "./pages/NotFound"
 import About from "./pages/About"
 import PostDetail from "./pages/PostDetail"
+import BugReport from "./pages/BugReport"
 
 
 
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/anon-posts/details/:id" element={<PostDetail />} />
+        <Route path="/bug-reports" element={<BugReport />} />
         <Route path='/*' element={<NotFound />}/>
         <Route path="/create" element={<Create />} />
         {/* <Route path="/:id" element={<Update />} /> */}
